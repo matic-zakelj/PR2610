@@ -18,9 +18,9 @@ Uporabljali bomo predvsem:
 
 
 ### Cilji oz. vprašanja
-- Kako vreme vpliva na rezultat (Kateri vozniki se najbolje znajdejo v dežju),
-- Kako zmogljivost avta vpliva na uvrstitev voznikov (ali se vidi, kateri proizvajalci so boljši),
-- Kako uvrstitev na kvalifikacijah vpliva na rezultat tekme,
-- Ali je bolje imeti hitrejši avto na ravnini ali v ovinkih,
-- Graf, kako obraba različnih trdot gum vpliva na čas krogov skozi dirko,
+- Kako vremenske razmere vplivajo na čase krogov in rezultate dirk? Ali so nekateri vozniki boljši v slabših vremenskih razmerah?  
+- Kako zmogljivost avta vpliva na uvrstitev voznikov (ali se vidi, kateri proizvajalci so boljši).
+- Kako uvrstitev na kvalifikacijah vpliva na končni rezultat dirke? Ali obstaja močna korelacija med štartnim položajem in končno uvrstitvijo?
+- Ali je za boljsš rezultat  pomembnejša visoka hitrost na ravninah ali učinkovitost v ovinkih.
+- Prikazati, kako obraba različnih trdot pnevmatik vpliva na čase krogov skozi dirko.
 - Napoved zmagovalca dirke in svetovnega prvaka glede na pretekle dirke in kvalifikacije trenutne sezone.
