@@ -1,6 +1,6 @@
 # PR2610: Analiza dirk Formule 1
 ## Projektna naloga pri predmetu Podatkovno Rudarjenje
-Člani skupine: Matic Žakelj, Mark Hafner, Nejc Gnilšek.
+Člani skupine: Matic Žakelj, Mark Hafner, Nejc Gnilšek, Matevž Kozole Zoran.
 
 ### Opis problema
 Formula 1 na prvi pogled izgleda zelo nepredvidljiva. Zanima nas, kako različni faktorji vplivajo na rezultat posamezne dirke in uvrstitve v skupnem seštevku.
