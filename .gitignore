@@ -1,3 +1,4 @@
 *:Zone.Identifier
 data/
-cache/
+cache/*
+!cache/placeholder.txt
