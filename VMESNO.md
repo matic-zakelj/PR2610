@@ -100,17 +100,20 @@ Načrt:
 
 ### 3. Vpliv zmogljivosti ekip
 
-Analiza še ni dokončana.
-
 Načrt analize:
 - primerjava ekip glede na:
-    - povprečno uvrstitev
-    - povprečen čas kroga
-    - povprečna pozicija po dirkah
-    - variance med vozniki iste ekipe
+    - povprečno odstopanje ekip od najhitrejšega kroga na dirki v sezoni (Graf 1)
+    - odstopanje ekip od najhitrejšega kroga na dirki (Graf 2)
+    - odstopanje ekip od najhitrejše ekipe na dirki (Graf 3)
+    - odstopanje ekip od najhitrejše ekipe v sezoni (Graf 4)
 
 Cilj:
 - ugotoviti, katere ekipe (proizvajalci) so najbolj konkurenčne
+
+Rezultat (za sezono 2022):
+Analiza časov krogov pokaže, da je bila najuspešnejša ekipa Red Bull Racing, ki je dosegala najnižje mediane relativnih časov krogov. Najbližja konkurenta sta bila Ferrari in Mercedes, ki sta zaostajala za približno 0.26% oziroma 0.48%.
+
+Ostale ekipe so imele opazno slabšo zmogljivost, saj njihov zaostanek presega 1.6%, kar kaže na jasno ločnico med vodilnimi tremi ekipami in preostankom startne vrste.
 
 ---
 
