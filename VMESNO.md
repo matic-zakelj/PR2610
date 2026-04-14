@@ -116,11 +116,28 @@ Ostale ekipe so imele opazno slabšo zmogljivost, saj njihov zaostanek presega 1
 
 ### 4. Kvalifikacije vs. dirka
 
+ Cilj analize je bil preveriti, kako močno štartni položaj vpliva na končno uvrstitev na dirki. Primerjal sem `GridPosition` in `Position`
+  ter izračunal Spearmanovo in Pearsonovo korelacijo.
+
+  Za Italian Grand Prix 2025 je bila Spearmanova korelacija približno 0.70, kar kaže na močno povezavo med kvalifikacijami in rezultatom
+  dirke. Brez odstopov se je korelacija povečala na približno 0.79. Pri analizi celotne sezone 2025 je bila povprečna korelacija
+  približno 0.65.
+
+  Rezultat kaže, da so kvalifikacije pomembne za končni rezultat, vendar nanj vplivajo tudi strategija, odstopi in posebnosti posamezne dirke.
 
 ---
 
 ### 5. Ravnine vs. ovinki
+Cilj analize je bil ugotoviti, ali je za boljši rezultat pomembnejša visoka hitrost na ravninah ali hitrost v ovinkih. Za hitrost na
+  ravninah sem uporabil podatek `SpeedST`, za učinkovitost v ovinkih pa telemetrijo najhitrejših krogov.
+  
+  Za Italian Grand Prix 2025 je analiza pokazala, da je imela učinkovitost v ovinkih močnejšo povezavo z rezultatom kot hitrost na ravninah.
+  Korelacija med hitrostjo v ovinkih in končno uvrstitvijo je bila približno -0.52, povezava med hitrostjo na ravninah in
+  končno uvrstitvijo pa približno 0.16. Negativna korelacija pri ovinkih pomeni, da so vozniki z višjo hitrostjo skozi ovinke
+  ponavadi dosegali boljše rezultate.
 
+  Sezonska analiza je pokazala podobene rezultate. Pri povezavi s končnim rezultatom je bila učinkovitost v ovinkih močnejši signal na 20 od 24
+  dirk.
 
 ---
 
@@ -144,6 +161,8 @@ Načrt:
 - čas na krog se v večini primerov izboljšuje z obrabo
 - na nekaterih prizoriščih niso uporabljali vseh trdot
 - odstopanja od najhitrejšega kroga dirke oziroma najhitrejše ekipe še ne pomeni, da bo taka tudi končna razvrstitev
+- kvalifikacije so precej povezane s končno uvrstitvijo
+- učinkovitost v ovinkih je v večini dirk bolj povezana z rezultatom kot hitrost na ravninah
 
 ---
 
