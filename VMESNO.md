@@ -39,40 +39,44 @@ Metoda:
 - linearna regresija (TyreLife / LapTime)
 - izračun naklona (s / krog)
 
-Rezultati (za sezono 2022):
+Rezultati (za sezono 2025):
 
-*Povprečna degradacija po spojini (s/krog)*
-| Compound| mean    | std    | min     | max    |
-|---------|---------|--------|---------|--------|
-| HARD    | -0.0075 | 0.0776 | -0.2465 | 0.1174 |
-| MEDIUM  | -0.0207 | 0.0933 | -0.3252 | 0.1502 |
-| SOFT    | -0.0599 | 0.2900 | -1.0793 | 0.1090 |
+**Povprečna degradacija po spojini (s/krog)**
 
-*Najhitrejša in najpočasnejša degradacija po dirki*
+| Compound |  mean  |  std   |   min   |   max   |
+|----------|--------|--------|---------|---------|
+| HARD     | 0.0196 | 0.5444 | -1.4602 | 2.0937  |
+| MEDIUM   | 0.0035 | 0.1555 | -0.3995 | 0.6032  |
+| SOFT     | -0.0691| 0.1504 | -0.5280 | 0.0678  |
 
-| Dirka | Najslabša trdota | Povprečna sprememba čas/krog (s) | Najboljša trdota | Povprečna sprememba čas/krog (s) |
-|------|------------------|----------------------|------------------|----------------------|
-| Abu Dhabi Grand Prix | MEDIUM | 0.053503 | HARD | 0.006180 |
-| Australian Grand Prix | MEDIUM | -0.025264 | HARD | -0.063563 |
-| Austrian Grand Prix | HARD | 0.034611 | MEDIUM | 0.010151 |
-| Azerbaijan Grand Prix | SOFT | 0.017218 | HARD | -0.009203 |
-| Bahrain Grand Prix | MEDIUM | 0.150201 | SOFT | 0.005580 |
-| Belgian Grand Prix | MEDIUM | 0.115988 | HARD | 0.055530 |
-| British Grand Prix | SOFT | 0.054110 | MEDIUM | -0.061115 |
-| Canadian Grand Prix | HARD | 0.011349 | MEDIUM | -0.079614 |
-| Dutch Grand Prix | HARD | 0.019772 | SOFT | -0.049428 |
-| Emilia Romagna Grand Prix | SOFT | 0.099488 | HARD | -0.052612 |
-| French Grand Prix | MEDIUM | -0.019864 | HARD | -0.038717 |
-| Hungarian Grand Prix | SOFT | 0.090725 | HARD | -0.011971 |
-| Italian Grand Prix | SOFT | 0.016242 | MEDIUM | -0.016718 |
-| Mexico City Grand Prix | SOFT | 0.009331 | MEDIUM | -0.011335 |
-| Miami Grand Prix | HARD | -0.031154 | SOFT | -0.148457 |
-| Monaco Grand Prix | MEDIUM | -0.094657 | SOFT | -1.079286 |
-| Saudi Arabian Grand Prix | MEDIUM | -0.055379 | HARD | -0.077834 |
-| Singapore Grand Prix | SOFT | -0.065369 | MEDIUM | -0.325209 |
-| Spanish Grand Prix | HARD | 0.116106 | SOFT | 0.029786 |
-| São Paulo Grand Prix | HARD | 0.117370 | SOFT | -0.030997 |
-| United States Grand Prix | HARD | -0.004544 | MEDIUM | -0.032145 |
+**Najhitrejša in najpočasnejša degradacija po dirki**
+
+| Dirka                        | Najslabša trdota | Najslabša degredacija | Najboljša trdota | Najboljša degredacija |
+|------------------------------|------------------|-----------------------|------------------|-----------------------|
+| Abu Dhabi Grand Prix         | MEDIUM           | -0.004250             | SOFT             | -0.167251             |
+| Australian Grand Prix        | HARD             | 2.093713              | MEDIUM           | 0.603167              |
+| Austrian Grand Prix          | MEDIUM           | 0.044309              | SOFT             | -0.022610             |
+| Azerbaijan Grand Prix        | MEDIUM           | 0.010169              | HARD             | -0.028282             |
+| Bahrain Grand Prix           | HARD             | 0.017109              | SOFT             | -0.025706             |
+| Belgian Grand Prix           | HARD             | -0.061889             | MEDIUM           | -0.069547             |
+| British Grand Prix           | MEDIUM           | -0.399450             | HARD             | -1.460246             |
+| Canadian Grand Prix          | MEDIUM           | 0.110571              | HARD             | 0.011326              |
+| Chinese Grand Prix           | HARD             | -0.037571             | MEDIUM           | -0.055228             |
+| Dutch Grand Prix             | HARD             | 0.019441              | SOFT             | -0.027893             |
+| Emilia Romagna Grand Prix    | HARD             | 0.005351              | MEDIUM           | -0.023440             |
+| Hungarian Grand Prix         | HARD             | 0.011983              | SOFT             | -0.024789             |
+| Italian Grand Prix           | HARD             | -0.011160             | SOFT             | -0.229198             |
+| Japanese Grand Prix          | MEDIUM           | -0.011676             | SOFT             | -0.108805             |
+| Las Vegas Grand Prix         | HARD             | -0.028902             | MEDIUM           | -0.035904             |
+| Mexico City Grand Prix       | SOFT             | 0.018253              | HARD             | -0.010693             |
+| Miami Grand Prix             | MEDIUM           | -0.000255             | HARD             | -0.021960             |
+| Monaco Grand Prix            | SOFT             | 0.015627              | MEDIUM           | -0.013877             |
+| Qatar Grand Prix             | HARD             | -0.039624             | SOFT             | -0.073416             |
+| Saudi Arabian Grand Prix     | MEDIUM           | 0.019864              | HARD             | -0.001380             |
+| Singapore Grand Prix         | SOFT             | 0.030043              | MEDIUM           | -0.009871             |
+| Spanish Grand Prix           | SOFT             | 0.052697              | MEDIUM           | 0.018005              |
+| São Paulo Grand Prix         | SOFT             | 0.067758              | HARD             | 0.011744              |
+| United States Grand Prix     | SOFT             | -0.012766             | HARD             | -0.024987             |
 
 - soft pnevmatike imajo največjo degradacijo
 - hard pnevmatike so najbolj stabilne
@@ -88,13 +92,6 @@ Vizualizacije:
 
 ### 2. Vpliv vremena
 
-Analiza še ni dokončana.
-
-Načrt:
-- povezava med:
-    - temperaturo steze
-    - dežjem (wet/intermediate)
-    - časi krogov
 
 ---
 
@@ -110,42 +107,20 @@ Načrt analize:
 Cilj:
 - ugotoviti, katere ekipe (proizvajalci) so najbolj konkurenčne
 
-Rezultat (za sezono 2022):
-Analiza časov krogov pokaže, da je bila najuspešnejša ekipa Red Bull Racing, ki je dosegala najnižje mediane relativnih časov krogov. Najbližja konkurenta sta bila Ferrari in Mercedes, ki sta zaostajala za približno 0.26% oziroma 0.48%.
+Rezultat (za sezono 2025):
+Analiza časov krogov pokaže, da je bila najuspešnejša ekipa McLaren, ki je dosegala najnižje mediane relativnih časov krogov. Najbližji konkurenti sto bili Ferrari, Mercedes in Red Bull Racing, ki sto zaostajali za približno 0.45%, 0.57% oziroma za 0.67%, kljub temu pa je bil končni rezultat drugačen.
 
-Ostale ekipe so imele opazno slabšo zmogljivost, saj njihov zaostanek presega 1.6%, kar kaže na jasno ločnico med vodilnimi tremi ekipami in preostankom startne vrste.
+Ostale ekipe so imele opazno slabšo zmogljivost, saj njihov zaostanek presega 1.3%, kar kaže na jasno ločnico med vodilnimi štirimi ekipami in preostankom startne vrste.
 
 ---
 
 ### 4. Kvalifikacije vs. dirka
 
-Analiza še ni dokončana.
-
-Cilj:
-- preveriti korelacijo med:
-    - štartnim položajem
-    - končno uvrstitvijo
-
-Načrt:
-- Scatter plot
-- Pearsonova korelacija
-
-Pričakovanje:
-- pozitivna korelacija
 
 ---
 
 ### 5. Ravnine vs. ovinki
 
-Analiza še ni dokončana.
-
-Načrt:
-- uporaba telemetrije:
-    - hitrost na ravninah
-    - čas v ovinkih
-
-Cilj:
-- ugotoviti, ali je pomembnejša maksimalna hitrost ali hitrost v ovinkih
 
 ---
 
@@ -168,6 +143,7 @@ Načrt:
 - na različnih progah so različne trdote gum boljše
 - čas na krog se v večini primerov izboljšuje z obrabo
 - na nekaterih prizoriščih niso uporabljali vseh trdot
+- odstopanja od najhitrejšega kroga dirke oziroma najhitrejše ekipe še ne pomeni, da bo taka tudi končna razvrstitev
 
 ---
 
@@ -192,19 +168,12 @@ stats.linregress(x, y)
 ```python
 plt.scatter(...)
 plt.plot(...)
+plt.bar(...)
+plt.hist(...)
+plt.boxplot(...)
 sns.heatmap(...)
 ```
 
 ---
 
 ## Zaključek in nadaljnje delo
-
-Projekt je trenutno v fazi, kjer je ena analiza že implementirana in daje smiselne rezultate.
-
-Naslednji koraki vključujejo:
-
-- vključitev vremenskih podatkov
-- analizo kvalifikacij
-- modeliranje napovedi rezultatov
-
-Končni cilj je celovito razumeti dejavnike, ki vplivajo na uspeh v Formuli 1.
