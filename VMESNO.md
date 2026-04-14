@@ -91,7 +91,11 @@ Vizualizacije:
 ---
 
 ### 2. Vpliv vremena
+Za vsakega voznika smo dobili čase krogov v deževnih razmerah v sezoni 2025 (podatek `Compound` nam pove, na katerih pnevmatikah je voznik, `Intermediate` so za deževne razmere), ter dodali pogoj, da jih je opravil vsaj 50, da se izognemo kakšnim osamelcem oz. čudnim rezultatom (npr. če je voznik naredil le 10 krogov na eni izmed krajših prog, ter 0 krogov na ostalih, bo imel očitno krajši povprečni čas, kakor ostali).
 
+Nato na grafu prikažemo, kateri vozniki so imeli najkrajši povprečni čas v deževnih razmerah ter tudi koliko točk so dobili na teh dirkah.
+
+Analizirali smo tudi, kako se časi krogov spreminjajo skozi dirko, ko grejo vozniki iz suhih na mokre gume (in obratno).
 
 ---
 
