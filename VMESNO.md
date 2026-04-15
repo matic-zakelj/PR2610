@@ -24,7 +24,7 @@ Uporabljeni atributi:
 - GridPosition, Position
 - Compound
 - Race, Season
-- (v nadaljevanju: Weather, Speed, Telemetry)
+- Weather, Speed, Telemetry
 
 ---
 
