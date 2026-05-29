@@ -1,4 +1,6 @@
 *:Zone.Identifier
 data/
 cache/*
+streamlit_app/cache/*
 !cache/placeholder.txt
+!streamlit_app/cache/placeholder.txt
