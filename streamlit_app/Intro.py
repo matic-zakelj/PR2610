@@ -16,10 +16,11 @@ import plotly.graph_objects as go
 import streamlit as st
 from consts import *
 
-fastf1.Cache.enable_cache("./cache")
+fastf1.Cache.enable_cache("./streamlit_app/cache")
 
 st.title("Intro")
 
+switched_season = False  # switch ce je bila zamenjana sezona
 # izbira sezone
 with st.form("season_selector"):
     SEASON = st.slider(
@@ -33,6 +34,8 @@ with st.form("season_selector"):
 if season_submitted:
     if st.session_state.get("season") != SEASON:
         st.session_state.selected_races = []  # reset
+        switched_season = True
+
     st.session_state.season = SEASON
 
 SEASON = st.session_state.get("season", 2025)
@@ -51,7 +54,11 @@ selected_races_default = (
     if "selected_races" in st.session_state and st.session_state.selected_races
     else RACES
 )
+if switched_season:
+    st.session_state.selected_races = RACES
+    switched_season = False
 
+# izbira dirk
 with st.form("race_selector"):
     selected_races = st.multiselect(
         "Izberite dirke",
@@ -59,20 +66,21 @@ with st.form("race_selector"):
         default=selected_races_default,
         key="selected_races_input",
     )
-    submitted = st.form_submit_button("Potrdi izbiro")
+    submitted_races = st.form_submit_button("Potrdi izbiro")
 
-if submitted:
+if submitted_races:
     st.session_state.selected_races = selected_races
 
 selected_races = st.session_state.get("selected_races", RACES)
 
 
-def graf_komulativnih_tock():
+@st.cache_data(show_spinner="Pripravljam podatke...")
+def graf_komulativnih_tock(season: int):
     # --- Kumulativne točke konstruktorjev ---
     points_rows = []
     for race in RACES:
         try:
-            session = fastf1.get_session(SEASON, race, "R")
+            session = fastf1.get_session(season, race, "R")
             session.load(laps=False, telemetry=False, weather=False, messages=False)
             res = session.results[["TeamName", "Points"]].copy()
             res["Race"] = race
@@ -95,7 +103,7 @@ def graf_komulativnih_tock():
 
     # Barve ekip
     try:
-        _s = fastf1.get_session(SEASON, 1, "R")
+        _s = fastf1.get_session(season, 1, "R")
         _s.load(laps=False, telemetry=False, weather=False, messages=False)
         team_colors = {t: get_team_color(t, session=_s) for t in team_results}
     except:
@@ -125,7 +133,7 @@ def graf_komulativnih_tock():
 
     fig.update_layout(
         title=dict(
-            text=f"Komulativni seštevek točk konstruktorjev — sezona {SEASON}",
+            text=f"Komulativni seštevek točk konstruktorjev — sezona {season}",
             font=dict(color="white", size=16),
         ),
         paper_bgcolor="#2B2B2B",
@@ -151,4 +159,4 @@ def graf_komulativnih_tock():
     st.plotly_chart(fig, use_container_width=True)
 
 
-graf_komulativnih_tock()
+graf_komulativnih_tock(SEASON)
