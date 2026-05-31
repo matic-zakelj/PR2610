@@ -85,7 +85,7 @@ if st.button('Napovej'):
         top3 = race.sort_values('FinalPosition').head(3)['Abbreviation'].tolist()
         event_name = schedule[schedule['RoundNumber'] == round_num]['EventName'].iloc[0]
         st.write(f"**Dirka {round_num} - {event_name}**")
-        st.write(f"1. {top3[0]}  2. {top3[1]}  3. {top3[2]}")
+        st.write(f"1. {top3[0]}  \n2. {top3[1]}  \n3. {top3[2]}")
 
     points_first = df_season.groupby('Abbreviation')['Points'].sum().reset_index()
     points_pred = pred_df.groupby('Abbreviation')['RoundPoints'].sum().reset_index()
