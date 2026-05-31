@@ -5,3 +5,4 @@ cache/*
 streamlit_app/cache/*
 !cache/placeholder.txt
 !streamlit_app/cache/placeholder.txt
+__pycache__

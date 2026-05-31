@@ -35,7 +35,7 @@ def styled_layout(title: str, xaxis_title="", yaxis_title="", **kwargs):
     return dict(
         **LAYOUT,
         title=dict(text=title, font=dict(color="white", size=15)),
-        xaxis=dict(title=xaxis_title, gridcolor="#555555", tickangle=35),
+        xaxis=dict(title=xaxis_title, gridcolor="#555555"),
         yaxis=dict(title=yaxis_title, gridcolor="#555555"),
         legend=dict(bgcolor="rgba(0,0,0,0.2)", font=dict(color="white")),
         **kwargs,
@@ -89,7 +89,8 @@ def get_all_laps_and_slopes(season: int, races: tuple):
         try:
             all_laps.append(load_race_laps(season, race))
         except Exception as e:
-            st.warning(f"NAPAKA pri {race}: {e}")
+            #st.warning(f"NAPAKA pri {race}: {e}")
+            pass
         progress.progress((i + 1) / len(races), text=f"Nalagam: {race}")
     progress.empty()
 

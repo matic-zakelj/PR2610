@@ -55,7 +55,8 @@ def get_laps_dry(season: int, races: tuple) -> pd.DataFrame:
         try:
             all_laps.append(load_race_laps(season, race))
         except Exception as e:
-            st.warning(f"NAPAKA pri {race}: {e}")
+            #st.warning(f"NAPAKA pri {race}: {e}")
+            pass
         progress.progress((i + 1) / len(races), text=f"Nalagam: {race}")
     progress.empty()
 
@@ -318,7 +319,7 @@ def graf_clustering():
     fig.update_layout(**styled_layout(
         f"K-means clustering ekip — sezona {SEASON}",
         xaxis_title="Povprečna relativna hitrost (MedianPct %)",
-        yaxis_title="Nekonsistentnost (StdPct %)",
+        yaxis_title="Konsistentnost (StdPct %)",
         legend=dict(bgcolor="rgba(0,0,0,0.2)", font=dict(color="white")),
         height=520,
     ))
