@@ -64,6 +64,38 @@ Rezultati (za sezono 2026):
 
 ### 2. Vpliv vremena
 
+Načrt analize:
+- primerjava voznikov v deževnih razmerah glede na:
+    - skupen povprečen čas krogov v dežju
+    - skupen seštevek točk, ki so jih vozniki dobili v dirkah, kjer je bil prisoten dež
+    - analiza vseh deževnih dirk, glede na uporabo pnevmatik in časov krogov
+
+Cilj:
+- ugotoviti, kateri vozniki so bili najboljši v deževnih razmerah ter prikaz, kako dež vpliva na čase krogov
+
+Povprečni časi krogov, dirkači so morali odvoziti vsaj 50 krogov v deževnih razmerah, drugače se jih ni vključilo:
+
+<img src="slike/casvreme.png" alt="Časi v dežju">
+
+Iz tega grafa razberemo, da sta oba voznika Mclarna dominirala tudi v deževnih razmerah, nekateri vozniki hitrih ekip so bili tudi hitrejši, najhitrejši v "midfield-u" je bil pa Hulkenberg, kar ni presenetljivo, saj je na eni izmed teh dirk končno dobil svoje prve karierne stopničke.
+
+Točke, ki so jih vozniki dobili v deževnih razmerah:
+
+<img src="slike/tockevreme.png" alt="Časi v dežju">
+
+Tudi tukaj je razvidno, da sta oba Mclarna dominirala, vendar tokrat v obratnem vrstnem redu, saj je Piastri v eni izmed teh dirk naredil napako, zaradi česar je izgubil nekaj pozicij, in tudi v eni drugi dirki dobil kazen med dirko, zaradi česar ni dobil zmage.
+
+Še graf VN Avstralije:
+
+<img src="slike/avstralijavreme.png" alt="Časi v dežju">
+
+Vidimo, da je bilo na začetku kar počasi, zaradi varsnostnega avta, nato so se časi nekoliko umirili. Okoli 35 kroga pa je razvidno, da so ekipe mislile, da bojo pnevmatike za suhe razmere hitrejše, vendar so po 10-15 krogih šle nazaj na pnevmatike za mokre razmere.
+
+In še graf VN Belgije:
+
+<img src="slike/belgijavreme.png" alt="Časi v dežju">
+
+Tukaj pa vidimo manj kaotično dirko glede časov, na začetku so odpeljali nekaj krogov za varnostnim avtom (ker je FIA določila, da je bila proga premokra za dirkanje), nato so par krogov dirkali na pnevmatikah za mokre razmere, okoli 12 kroga pa zamenjali na pnevmatike za suhe razmere.
 
 ---
 
@@ -101,3 +133,35 @@ Iz grafa pri delitvi na 3 skupine je razvidno, da so si v letošnji sezoni najbo
 ---
 
 ### 6. Napovedovanje rezultatov
+
+Načrt analize:
+
+- Napoved zmagovalca dirke in prvaka sezone na podlagi:
+   - kvalifikacijskih rezultatov
+   - povprečnih končnih pozicij zadnjih 5 dirk
+   - povprečnih štartnih pozicij zadnjih 5 dirk
+   - kumulativnih točk v sezoni
+
+- Uporaba RandomForrestRegressor
+
+Cilj:
+
+- Na podlagi znanih rezultatov prvih 5 dirk napovedati zmagovalca vsake naslednje dirke ter določiti najverjetnejšega prvaka sezone
+
+Napovedovalni model je bil treniran na podatkih 2018-2024 (oziroma do 2025 za napovedovanje 2026 sezone)
+
+Ena izmed napovedi za sezono 2025:
+
+<img src="slike/napoved2025.png" alt="Napoved sezone 2025">
+
+Ter dejanska sezona 2025:
+
+<img src="slike/dejanska2025.png" alt="Dejanski rezultati sezone 2025">
+
+Kakor je razvidno iz grafa, je pravilno dobil top 3 voznike, vendar v napačnem vrstnem redu, v resnici je bil NOR prvak. Tudi voznike od 4-7. mesta je pravilno napovedal, vendar spet v narobnem vrstnem redu.
+
+Ena izmed napovedi za sezono 2026:
+
+<img src="slike/napoved2026.png" alt="Napoved sezone 2026">
+
+Tukaj pa lahko vidimo, da napoveduje dominanco ekipe Mercedes, vendar ju bo ravno na zadnji dirki voznik Ferrarija prehitel za naslov prvaka. Napoveduje tudi, da bojo skozi sezono top 3 ekipe: Mercedes, Ferrari in Mclaren, Verstappen bo pa tako rekoč "best of the rest".
