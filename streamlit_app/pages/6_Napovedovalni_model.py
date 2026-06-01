@@ -38,6 +38,7 @@ def load_season_data(year, num_rounds):
     return df.sort_values('Round').reset_index(drop=True)
 
 st.title('F1 Napoved prvaka')
+st.subheader('Opozorilo: Model je bil treniran na podatkih 2018-2025, zato so lahko napovedi pristransko natančne za te sezone!!!')
 
 st.header('Nastavitve')
 season = st.selectbox('Sezona', [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026])
