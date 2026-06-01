@@ -194,7 +194,7 @@ def graf_violin_trdote():
     st.subheader("Distribucija časov krogov po trdotah — ena dirka")
     st.caption(
         "Violin plot prikaže celotno porazdelitev časov krogov za vsako trdoto. "
-        "Širši del pomeni več krogov pri tej hitrosti. Vgrajeni box plot pokaže mediano in kvartile."
+        "Širši del pomeni več krogov pri tej hitrosti."
     )
 
     try:
