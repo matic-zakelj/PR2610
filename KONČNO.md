@@ -32,11 +32,15 @@ Uporabljeni atributi:
 
 ### 1. Degradacija pnevmatik
 
-Analizirali smo, kako se čas kroga spreminja z obrabo pnevmatik.
+Načrt analize:
+- primerjava degradacije in časa kroga različnoh trdot gum na eni dirki
+- primerjava degradacije različnih trdot gun na vseh dirkah
+- Statistična analiza degradacije gum po dirkah
 
 Metoda:
 - linearna regresija (TyreLife / LapTime)
 - izračun naklona (s / krog)
+- statistična analiza
 
 Rezultati (za sezono 2026):
 
@@ -67,10 +71,11 @@ Rezultati (za sezono 2026):
 
 Načrt analize:
 - primerjava ekip glede na:
-    - povprečno odstopanje ekip od najhitrejšega kroga na dirki v sezoni (Graf 1)
-    - odstopanje ekip od najhitrejšega kroga na dirki (Graf 2)
-    - odstopanje ekip od najhitrejše ekipe na dirki (Graf 3)
-    - odstopanje ekip od najhitrejše ekipe v sezoni (Graf 4)
+    - povprečno odstopanje ekip od najhitrejšega kroga na dirki v sezoni
+    - trend zmogljivosti ekip skozi sezono
+    - primerjava konstruktorjev po mediani odstopanja od najhitrejšega kroga
+    - grupiranje ekip s k-means
+    - radar chart
 
 Cilj:
 - ugotoviti, katere ekipe (proizvajalci) so najbolj konkurenčne
@@ -80,6 +85,10 @@ Rezultat (za sezono 2026):
 <img src="slike/mercedes_vs_ferrari.png" alt="Mercedes vs. Ferrari">
 
 Iz radarskega grafa se vidi, da je ekipa Mercedes boljša kot ekipa Ferrari v hitrosti in imajo posledično tudi več najhitrejših krogov, hkrati pa je ekipa Ferrari bolj konsistentna in ima več podatkov, zaradi odstopa Georgea Russlla na zadnji dirki v Kanadi.
+
+<img src="slike/k_means_primerjava_ekip_2026.png" alt="K-means primerjava ekip">
+
+Iz grafa pri delitvi na 3 skupine je razvidno, da so si v letošnji sezoni najbolj konkurenčne ekipe Mercedes, Ferrari in obe ekipi Red Bulla, v 2 skupini so vse ostale ekipe razen ekipe Aston Martin, ki ima v sezoni 2026 največ težav z vozilom.
 
 ---
 
