@@ -33,9 +33,9 @@ Uporabljeni atributi:
 ### 1. Degradacija pnevmatik
 
 Načrt analize:
-- primerjava degradacije in časa kroga različnoh trdot gum na eni dirki
-- primerjava degradacije različnih trdot gun na vseh dirkah
-- Statistična analiza degradacije gum po dirkah
+- primerjava degradacije in časa kroga različnih trdot gum na eni dirki
+- primerjava degradacije različnih trdot gum na vseh dirkah
+- statistična analiza degradacije gum po dirkah
 
 Metoda:
 - linearna regresija (TyreLife / LapTime)
@@ -57,8 +57,8 @@ Rezultati (za sezono 2026):
 | Miami Grand Prix      |           94.298 | SOFT             |                   -0.0111 | MEDIUM           |                  0.0190 |
 
 
-- Hitrost degradacije gum je odvisna od proge in vremena, zato imajo nekatere gume manjšo degradacijo na eni progi in večjo na drugi, zato ni najboljše trdote.
-- V sezoni 2026 je na dirki Miamiju so imele SOFT gume najboljšo degradacijo (Vsak krog je bil hitrejši), ampak HARD gume so bile povprečno 1.5 sekunde hitrejše na krog, in kljub slabši degradaciji v kombinaciji z daljšo uporabo na koncu najboljša izbira.
+- Hitrost degradacije gum je odvisna od proge in vremena, zato imajo nekatere gume manjšo degradacijo na eni progi in večjo na drugi, zato ni ene najboljše trdote.
+- Na dirki v Miamiju v sezoni 2026 so imele SOFT gume najboljšo degradacijo (vsak krog je bil hitrejši), ampak HARD gume so bile povprečno 1.5 sekunde hitrejše na krog in so bile kljub slabši degradaciji v kombinaciji z daljšo uporabo na koncu najboljša izbira.
 
 ---
 
@@ -116,19 +116,39 @@ Rezultat (za sezono 2026):
 
 <img src="slike/mercedes_vs_ferrari.png" alt="Mercedes vs. Ferrari">
 
-Iz radarskega grafa se vidi, da je ekipa Mercedes boljša kot ekipa Ferrari v hitrosti in imajo posledično tudi več najhitrejših krogov, hkrati pa je ekipa Ferrari bolj konsistentna in ima več podatkov, zaradi odstopa Georgea Russlla na zadnji dirki v Kanadi.
+Iz radarskega grafa se vidi, da je ekipa Mercedes boljša kot ekipa Ferrari v hitrosti in ima posledično tudi več najhitrejših krogov, hkrati pa je ekipa Ferrari bolj konsistentna in ima več podatkov zaradi odstopa Georgea Russella na zadnji dirki v Kanadi.
 
 <img src="slike/k_means_primerjava_ekip_2026.png" alt="K-means primerjava ekip">
 
-Iz grafa pri delitvi na 3 skupine je razvidno, da so si v letošnji sezoni najbolj konkurenčne ekipe Mercedes, Ferrari in obe ekipi Red Bulla, v 2 skupini so vse ostale ekipe razen ekipe Aston Martin, ki ima v sezoni 2026 največ težav z vozilom.
+Iz grafa pri delitvi na 3 skupine je razvidno, da so si v letošnji sezoni najbolj konkurenčne ekipe Mercedes, Ferrari in obe ekipi Red Bulla. V 2. skupini so vse ostale ekipe razen ekipe Aston Martin, ki ima v sezoni 2026 največ težav z vozilom.
 
 ---
 
 ### 4. Kvalifikacije vs. dirka
 
+V tem delu smo preverili, kako močna je korelacija med štartnim položajem in končno uvrstitvijo. Uporabil sem rezultate dirke iz stolpcev `GridPosition` in `Position`. Najprej sem korelacijo izračunal za vse voznike, nato pa še posebej za voznike, pri katerih stolpec `Status` ni pokazal odstopa ali tehničnih težav.
+
+Za primer dirke Italian Grand Prix 2025 je bila Spearmanova korelacija med štartnim položajem in končno uvrstitvijo približno **0.70**, Pearsonova korelacija pa prav tako približno **0.70**. To kaže na pozitivno povezavo: vozniki, ki štartajo bolj spredaj, pogosto tudi končajo dirko višje. Ko sem izločil odstope oziroma nekončane dirke, se je Spearmanova korelacija povečala na **0.79**.
+
+Sezonska analiza za sezono 2025 je pokazala povprečno Spearmanovo korelacijo približno **0.65**. Kvalifikacije so torej zelo pomembne za uspeh, vendar niso edini dejavnik. Na končni rezultat vplivajo še strategija postankov, obraba pnevmatik, varnostni avto, kazni, napake voznikov in zanesljivost dirkalnika.
+
+<img src="slike/kvalifikacije_vs_dirka.png" alt="Korelacija med štartnim položajem in končno uvrstitvijo">
+
+Slika prikazuje Spearmanovo korelacijo med štartnim položajem in končno uvrstitvijo za posamezne dirke v sezoni 2025. Višja vrednost pomeni močnejšo povezavo med dobrimi kvalifikacijami in dobrim končnim rezultatom.
+
 ---
 
 ### 5. Ravnine vs. ovinki
+
+Ta del analize primerja, ali je z rezultatom bolj povezana hitrost na ravninah ali učinkovitost v ovinkih. Za hitrost na ravninah sem uporabil podatek `SpeedST`, za ovinke pa telemetrijo najhitrejših oziroma reprezentativnih krogov. Pri vsaki dirki sem s pomočjo podatkov o ovinkih na stezi izračunal povprečno hitrost voznika v območju ovinkov.
+
+Na primeru Italian Grand Prix 2025 je bila povezava med hitrostjo na ravninah in končno uvrstitvijo šibka: Spearmanova korelacija je bila približno **0.16**. Pri učinkovitosti v ovinkih je bila povezava močnejša. Spearmanova korelacija je bila približno **-0.52**. Negativna vrednost je pričakovana, ker nižja končna pozicija pomeni boljši rezultat. Višja hitrost v ovinkih je bila povezana z boljšimi uvrstitvami.
+
+Podobno je bilo tudi čez celotno sezono 2025. Učinkovitost v ovinkih je bila pomembnejša za končni rezultat na **20 od 24 dirk**, pri primerjavi z dirkaškim tempom pa na **23 od 24 dirk**. To kaže, da je pomembna celotna učinkovitost dirkalnika, posebej stabilnost in hitrost skozi ovinke.
+
+<img src="slike/ravnine_vs_ovinki.png" alt="Primerjava povezave ravnin in ovinkov z rezultatom">
+
+Slika primerja, kako močno sta hitrost na ravninah in učinkovitost v ovinkih povezani s končnim rezultatom oziroma dirkaškim tempom. Večji absolutni Spearmanov koeficient pomeni, da je bila izbrana metrika na tisti dirki močnejši signal uspešnosti.
 
 ---
 
