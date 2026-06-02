@@ -28,6 +28,12 @@ Uporabljeni atributi:
 
 ---
 
+## Streamlit aplikacija
+
+[Povezava do streamlit aplikacije za interaktivni prikaz analiz.](https://pr2610-87wgacwuup9jwrtbajsgyt.streamlit.app)
+
+---
+
 ## Izvedene analize
 
 ### 1. Degradacija pnevmatik
